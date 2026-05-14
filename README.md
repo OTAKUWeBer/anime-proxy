@@ -18,15 +18,18 @@ A lightweight, high-performance Cloudflare Worker designed to proxy HLS (m3u8) s
 1. Sign up for a free account at [dash.cloudflare.com](https://dash.cloudflare.com/sign-up).
 2. Verify your email to activate your account.
 
-### 2. Create an API Token (Required for automated tools)
-To use automated deployment or external management, you must create a custom API token:
+### 2. Create an API Token (Optional)
+> [!CAUTION]
+> Never share your API token. This is a private key for your own account.
+
+If you want to use automated tools (like Wrangler) or manage your worker from an external app, create a token on **your** account:
 1. Go to **My Profile** > **API Tokens**.
 2. Click **Create Token** > **Create Custom Token**.
 3. Set the following permissions:
     - **Account** — **Account Settings** — **Read**
     - **User** — **Workers Script** — **Edit**
 4. Click **Continue to summary** and **Create Token**.
-5. **Copy the token immediately** (it will only be shown once).
+5. Copy the token and keep it safe. **You do not need this if you are deploying manually via the website.**
 
 ### 3. Deploy the Worker
 1. In the Cloudflare Dashboard, go to **Workers & Pages** > **Create application** > **Create Worker**.
